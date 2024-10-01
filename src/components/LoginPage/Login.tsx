@@ -1,9 +1,16 @@
 import { useGoogleLogin } from "@react-oauth/google";
 import { FcGoogle } from "react-icons/fc"
+import { useNavigate } from "react-router-dom";
 
 export default function LoginPage() {
 
-    const login = useGoogleLogin({});
+    const navigate = useNavigate()
+
+    const login = useGoogleLogin({
+        onSuccess: () => {
+            navigate("/profile")
+        }
+    });
 
     return (
         <div id="login" className="flex justify-center items-center min-h-full flex-col px-6 py-12 sm:w-screen sm:h-screen h-[70vh]">
