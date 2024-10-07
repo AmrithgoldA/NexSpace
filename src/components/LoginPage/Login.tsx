@@ -13,12 +13,12 @@ export default function LoginPage() {
     });
 
     return (
-        <div id="login" className="flex justify-center items-center min-h-full flex-col px-6 py-12 sm:w-screen sm:h-screen h-[70vh]">
-            <div className="border-slate-500 border-2 min-h w-96 p-5 rounded-md mx-10">
+        <div id="login" className="flex justify-center items-center min-h-full flex-col px-6 py-12 sm:w-screen sm:h-screen h-[100vh] bg-white dark:bg-black text-black dark:text-white">
+            <div className="border-slate-500 border-2 min-h w-full sm:w-96 p-5 rounded-md mx-10">
                 <div>
-                    <p className="mb-2">Welcome!!💕</p>
+                    <p className="mb-2">NexSpace Welcome's You!!</p>
                     <div>
-                        <button className="border-slate-500 border-2 rounded-md py-1 px-3 w-full hover:bg-sky-100 transition-colors duration-300" onClick={() => login()}>
+                        <button className="border-slate-500 border-2 rounded-md py-1 px-3 w-full transition-colors duration-300" onClick={() => login()}>
                             <span className="inline-flex h-full w-full items-center justify-center gap-2">
                                 <FcGoogle />
                                 Login With Google
@@ -33,16 +33,15 @@ export default function LoginPage() {
                     <div className="bg-slate-500 w-[45%] h-[0.2rem] my-5"></div>
                 </div>
 
-
                 <div className="flex flex-col rounded-md">
-                    <label htmlFor="email">Name: </label>
+                    <label htmlFor="email">Email: </label>
                     <input
-                        className="border-slate-500 border-2 rounded-md py-1 px-4 mb-4"
+                        className="border-slate-500 border-2 rounded-md py-1 px-4 mb-4 placeholder-slate-400 bg-white dark:bg-black"
                         id="email" type="email" placeholder="example@gmail.com"
                     />
                     <label htmlFor="password">Password: </label>
                     <input
-                        className="border-slate-500 border-2 rounded-md py-1 px-4"
+                        className="border-slate-500 border-2 rounded-md py-1 px-4 placeholder-slate-400 bg-white dark:bg-black"
                         id="password" type="password" placeholder="********"
                     />
                 </div>
@@ -63,5 +62,6 @@ export default function LoginPage() {
                 </div>
             </div>
         </div>
+
     )
 }
